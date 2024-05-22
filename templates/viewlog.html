@@ -19,22 +19,24 @@
         <thead class="table-name">
             <th class="table-column-name1">id</th>
             <th class="table-column-name2">Имя</th>
-            <th class="table-column-name3">Загруженное фото</th>
-            <th class="table-column-name4">Дата посещения-загрузки</th>
-            <th class="table-column-name5">Используемый браузер</th>
+            <th class="table-column-name3">Дата посещения-загрузки</th>
+            <th class="table-column-name4">Используемый браузер</th>
+            <!-- <th class="table-column-name5">Загруженное фото</th> -->
             <th class="table-column-name6">Комментарии</th>
         </thead>
 
+        {% for log_row in the_data %}
         <tbody class="body-values-all">
             <tr class="body-values">
-                <th>001</th>
-                <td>Jukki</td>
-                <td>all</td>
-                <td>always</td>
-                <td>all</td>
-                <td>позже...</td>
+                <th></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <!-- <td></td> -->
+                <td><input type="text" name="" id=""></td>
             </tr>
         </tbody>
+        {% endfor %}
     </table>
 
 </body>

@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "viewlog_page",
+            "database": "forever_glasses",
+            "username": "Jukki"
+        }
+    ],
+    "editor.cursorStyle": "line-thin"
+}
