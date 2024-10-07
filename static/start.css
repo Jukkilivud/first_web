@@ -420,21 +420,25 @@ footer {
 } */
 
 /*Тело таблицы*/
-#viewlog {
+table {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+body {
     background-color: #070016;
     color: #fff;
     font-size: 2cap;
     border: #cf0303 solid;
-    height: 1080px;
+    height: 1200px;
 }
 
 .table-body {
     border: #1dcaf5 solid;
     width: 98%;
-    height: auto;
+    height: 1000px;
     margin: 1% 1% 1% 1%;
-    /* gap: 5%; */
-    /* border-collapse: collapse; */
 }
 
 /*Шапка таблицы*/
@@ -451,16 +455,19 @@ footer {
 }
 
 .body-values th {
+    border: #29c403 solid;
     background-color: #c75353;
 }
 
 .body-values td {
     background-color: #1dcaf5;
+    border: #000068 solid;
+
 }
 
 .body-values-all {
+    height: auto;
     text-align: center;
-    /* height: 70vh; */
 }
 
 
