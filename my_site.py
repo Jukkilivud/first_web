@@ -1,3 +1,4 @@
+# -*- coding: 1251 -*-
 from psycopg2 import connect, Error
 import psycopg2
 import html
@@ -10,10 +11,7 @@ app = Flask(__name__)
 @app.route('/viewlog', methods=['GET', 'POST'])
 def view_log() -> 'html':
     """Display the contents of the log file as a HTML table."""
-    return render_template('viewlog.html',
-                           the_title='View Log',
-                           the_row_titles=titles,
-                           the_data=contents,)
+    return render_template('viewlog.html')
 
 
 try:
@@ -25,11 +23,14 @@ try:
                                   )
 
     cursor = connection.cursor()
-    print("Info PostgreSQL")
-    print(connection.get_dsn_parameters(), "\n")
-    cursor.execute("SELECT version();")
-    record = cursor.fetchone()
-    print("You connection - ", record, "\n")
+    cursor.execute("SELECT * FROM view_users")
+    # cursor.execute(
+    #     "INSERT INTO view_users(id, browser, name, date_visit) VALUES(%s, %s, %s, %s)"
+    # )
+    rows = cursor.fetchall()
+    print('\n', "Connection database 'forever_glasses' successfully ('Успешное подключение!'):", '\n')
+    for row in rows:
+        print(row, '\n')
 
 except (Exception, Error) as error:
     print("Error server PostgreSQL", error)
